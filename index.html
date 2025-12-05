@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cumple de Anto — Domingo</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("o5nwznn2K4QalFfv0");
+        })();
+    </script>
+</head>
+
+<body>
+
+<div id="loader">Cargando...</div>
+
+<div id="content">
+
+    <h1>¡Estás Invitado!</h1>
+    <h2>Cumple de Anto — DOMINGO</h2>
+    <h3>08/02/26</h3>
+
+    <!-- CONFIRMACIÓN -->
+    <div class="section">
+        <h2>Confirmación de Asistencia</h2>
+
+        <form id="rsvpForm">
+            <label>Nombre y Apellido</label>
+            <input type="text" id="nombre" required />
+
+            <label>¿Asistís?</label>
+            <select id="asistencia" required>
+                <option value="">Seleccionar…</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Acompañantes (máx 2)</label>
+            <input type="number" id="acompanantes" min="0" max="2" value="0" />
+            <p id="acompanantesMsg" class="error-msg">⚠ Máximo permitido: 2</p>
+            <p id="acompanantesCount" class="count-msg">Acompañantes seleccionados: 0</p>
+
+            <button type="submit">Confirmar</button>
+        </form>
+
+        <p id="msg"></p>
+    </div>
+
+    <!-- GALERÍA -->
+    <h2>Galería del Evento</h2>
+
+    <button onclick="openGallery()">📅 Ver Galería Domingo</button>
+
+    <div id="uploadArea" class="section hidden">
+        <h2>Subir Fotos</h2>
+
+        <button onclick="uploadPhoto()">⬆ Subir Foto</button>
+
+        <p style="margin-top:15px; opacity:0.7;">
+            🔥 La galería se abrirá en una nueva pestaña para evitar bloqueos.
+        </p>
+    </div>
+
+    <footer>© SafeTech Presents: Anto’s Birthday</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
